@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Note Universe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'VT323', monospace;
+      background-color: #111;
+      color: #eee;
+      overflow-x: hidden;
+    }
+
+    header.hero {
+      position: relative;
+      height: 100vh;
+      background-image: url('https://images2.alphacoders.com/106/106472.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 1;
+    }
+
+    header.hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header.hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 4rem;
+      animation: fadeInDown 2s ease-out;
+      color: #f44336;
+    }
+
+    header.hero p {
+      font-size: 1.5rem;
+      animation: fadeInUp 2s ease-out;
+      color: #fff;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .slider {
+      overflow: hidden;
+      background-color: #222;
+      padding: 2rem 0;
+    }
+
+    .slider-track {
+      display: flex;
+      animation: scroll 30s linear infinite;
+    }
+
+    .slider-track img {
+      height: 200px;
+      margin: 0 15px;
+      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+
+    .slider-track img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #f44336;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .about {
+      padding: 4rem 2rem;
+      background-color: #181818;
+      color: #eee;
+      text-align: center;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .about h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      color: #f44336;
+      margin-bottom: 2rem;
+    }
+
+    .about p {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+      max-width: 900px;
+      margin: 1.5rem auto;
+      color: #ccc;
+      font-family: 'VT323', monospace;
+    }
+
+    .highlight {
+      color: #f44336;
+      font-weight: bold;
+    }
+
+    .episodes {
+      padding: 4rem 2rem;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .episodes h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #f44336;
+      position: relative;
+    }
+
+    .episodes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .episode {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .episode:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px #f44336;
+    }
+
+    .episode iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #111;
+      color: #999;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <h1>Welcome to Death Note Universe</h1>
+    <p>All episodes. One place. Embrace the dark justice.</p>
+  </header>
+
+  <section class="slider">
+    <div class="slider-track">
+      <img src="https://images2.alphacoders.com/106/thumbbig-106472.webp" alt="Death Note Image 1">
+      <img src="https://images3.alphacoders.com/192/thumbbig-192129.webp" alt="Death Note Image 2">
+      <img src="https://images4.alphacoders.com/194/thumbbig-194696.webp" alt="Death Note Image 3">
+      <img src="https://images3.alphacoders.com/740/thumbbig-740536.webp" alt="Death Note Image 4">
+      <img src="https://images8.alphacoders.com/722/thumbbig-722188.webp" alt="Death Note Image 5">
+      <img src="https://images3.alphacoders.com/153/thumbbig-153237.webp" alt="Death Note Image 6">
+      <img src="https://images.alphacoders.com/153/thumbbig-153263.webp" alt="Death Note Image 7">
+      <img src="https://images4.alphacoders.com/740/thumbbig-740602.webp" alt="Death Note Image 8">
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>About Death Note</h2>
+    <p>
+      <em>Death Note</em> is a legendary psychological thriller anime series that explores morality, justice, and the consequences of power.
+      The story follows <span class="highlight">Light Yagami</span>, a high school genius who discovers a mysterious notebook — the <span class="highlight">Death Note</span> —
+      which allows him to kill anyone simply by writing their name in it.
+    </p>
+    <p>
+      Guided by the god of death <span class="highlight">Ryuk</span>, Light sets out to cleanse the world of evil under the alias <strong>Kira</strong>.
+      But as his actions grow darker, a world-renowned detective known only as <span class="highlight">L</span> begins a chilling game of cat and mouse.
+    </p>
+    <p>
+      With twists at every turn, Death Note challenges its viewers to question what true justice really is.
+      Are you ready to enter the mind of a genius and decide where you stand?
+    </p>
+  </section>
+
+  <section class="episodes">
+    <h2>Episodes</h2>
+    <div class="episodes-grid">
+      <div class="episode">
+        <iframe src="https://www.youtube.com/embed/hkFpzfGB4G0" title="Death Note Episode 1" frameborder="0" allowfullscreen></iframe>
+        <h3>Episode 1: Rebirth</h3>
+      </div>
+      <div class="episode">
+        <iframe src="https://www.youtube.com/embed/EHfN42tbA_0" title="Death Note Episode 2" frameborder="0" allowfullscreen></iframe>
+        <h3>Episode 2: Confrontation</h3>
+      </div>
+      <div class="episode">
+        <iframe src="https://www.youtube.com/embed/aes19mUavj0" title="Death Note Episode 3" frameborder="0" allowfullscreen></iframe>
+        <h3>Episode 3: Dealings</h3>
+      </div>
+      <div class="episode">
+        <iframe src="https://www.youtube.com/embed/ZRJZ_TSLHMw" title="Death Note Episode 4" frameborder="0" allowfullscreen></iframe>
+        <h3>Episode 4: Pursuit</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Death Note Universe. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
